@@ -26,14 +26,4 @@ final class FinancialExtensionTest extends TestCase
             $this->assertMatchesRegularExpression('/^[a-zA-Z]{4}\d{7}$/', $ifsc);
         }
     }
-
-    public function testPan()
-    {
-        for ($i = 0; $i < 100; $i++) {
-            $ifsc = $this->faker->pan();
-
-            $this->assertEquals(10, strlen($ifsc));
-            $this->assertMatchesRegularExpression('/^[a-zA-Z]{5}\d{4}[a-zA-Z]$/', $ifsc);
-        }
-    }
 }

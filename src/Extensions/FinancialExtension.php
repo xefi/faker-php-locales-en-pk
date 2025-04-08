@@ -37,13 +37,4 @@ class FinancialExtension extends BaseFinancialExtension
 
         return sprintf('%s%07d', $bankCode, $branchCode);
     }
-
-    public function pan(): string
-    {
-        $letters = strtoupper($this->randomizer->getBytesFromString(implode(range('A', 'Z')), 5));
-        $digits = $this->randomizer->getInt(1000, 9999);
-        $suffix = strtoupper($this->randomizer->getBytesFromString(implode(range('A', 'Z')), 1));
-
-        return sprintf('%s%04d%s', $letters, $digits, $suffix);
-    }
 }
