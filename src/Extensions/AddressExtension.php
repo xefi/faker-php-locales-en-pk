@@ -6,6 +6,11 @@ use Xefi\Faker\Extensions\Extension;
 
 class AddressExtension extends Extension
 {
+    public function getLocale(): string|null
+    {
+        return 'en_PK';
+    }
+
     protected $provinces = [
         'Punjab' => 'PB',
         'Sindh' => 'SD',
