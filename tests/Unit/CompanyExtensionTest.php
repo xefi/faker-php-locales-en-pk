@@ -20,10 +20,8 @@ final class CompanyExtensionTest extends TestCase
 
     public function testNtn()
     {
-        $faker = new Container(false);
-
         for ($i = 0; $i < 1000; $i++) {
-            $result = $faker->ntn();
+            $result = $this->faker->ntn();
 
             $this->assertMatchesRegularExpression('/^\d{8}$/', $result);
         }
