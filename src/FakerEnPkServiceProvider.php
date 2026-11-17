@@ -7,6 +7,7 @@ use Xefi\Faker\EnPk\Extensions\ColorsExtension;
 use Xefi\Faker\EnPk\Extensions\CompanyExtension;
 use Xefi\Faker\EnPk\Extensions\FinancialExtension;
 use Xefi\Faker\EnPk\Extensions\PersonExtension;
+use Xefi\Faker\EnPk\Extensions\PhoneExtension;
 use Xefi\Faker\EnPk\Extensions\TextExtension;
 use Xefi\Faker\Providers\Provider;
 
@@ -21,6 +22,7 @@ class FakerEnPkServiceProvider extends Provider
             FinancialExtension::class,
             PersonExtension::class,
             TextExtension::class,
+            PhoneExtension::class,
         ]);
     }
 }
