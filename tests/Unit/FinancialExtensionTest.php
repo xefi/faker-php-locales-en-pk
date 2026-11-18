@@ -11,7 +11,7 @@ final class FinancialExtensionTest extends TestCase
         for ($i = 0; $i < 100; $i++) {
             $iban = $this->faker->iban();
 
-            $this->assertEquals(28, strlen($iban));
+            $this->assertMatchesRegularExpression('/^PK\d{2}[A-Z]{4}\d{16}$/', $iban);
             $this->assertStringStartsWith('PK', $iban);
             $this->assertTrue(Iban::isValid($iban));
         }
